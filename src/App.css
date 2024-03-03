@@ -75,3 +75,7 @@ html {
 select option {
   background-color: red;
 }
+
+option:hover{
+  background-color: black;
+}

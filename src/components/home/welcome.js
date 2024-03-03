@@ -31,7 +31,7 @@ export default function Welcome(){
                 <p className="title text-white text-4xl">Dive into a world of enjoyment</p>
                 <p className="text-[#d1dde7] text-2xl">and challenge yourself with our selection of engaging games!</p>
             </div>
-            <img src={arrow} className="absolute bottom-3"></img>
+            <img alt="welcome" src={arrow} className="absolute bottom-3"></img>
         </div>
     )
 }
