@@ -4,6 +4,7 @@ export default function Langauge() {
     const { setLocale, RTL } = useTranslation();
     return (
         <select
+            
             style={{ backgroundColor: "transparent", }}
             className={`px-3 cursor-pointer text-white`}
             onChange={(e) => setLocale(e.target.value)}

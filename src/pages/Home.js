@@ -1,4 +1,3 @@
-import { useEffect, useRef } from "react";
 import Welcome from "../components/home/welcome";
 
 
