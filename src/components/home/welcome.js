@@ -3,7 +3,7 @@ import arrow from "../../imgs/down.png"
 import welcome from "../../imgs/welcome3.jpg"
 import mobile from "../../imgs/welcomeMobile.jpg"
 import { useTranslation } from "../../context/translation";
-export default function Welcome(){
+export default function Welcome({ScrollTo,intoRef}){
     const [size,setSize]=useState(null);
     const {t}=useTranslation();
     useEffect(() => {
@@ -28,12 +28,12 @@ export default function Welcome(){
                 size <= 768 ? `url(${mobile})`
                 : `url(${welcome})`
         }} 
-        className="welcome flex justify-center items-center pl-5 h-screen ">
+        className="welcome flex justify-center items-center  h-screen relative">
             <div className="flex flex-col justify-center">
-                <p className="title text-white text-4xl">{t("welcome-sentence1")}</p>
-                <p className="text-[#d1dde7] text-2xl">{t("welcome-sentence2")}</p>
+                <p className="title text-white text-center sm:text-6xl text-3xl">{t("welcome-sentence1")}</p>
+                <p className="text-[#d1dde7]  text-center sm:text-4xl text-2xl">{t("welcome-sentence2")}</p>
             </div>
-            <img alt="welcome" src={arrow} className="absolute bottom-3"></img>
+            <img onClick={()=>ScrollTo(intoRef)} alt="welcome" src={arrow} className="absolute bottom-3 cursor-pointer"></img>
         </div>
     )
 }

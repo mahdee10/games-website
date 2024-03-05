@@ -1,21 +1,12 @@
 import { useTranslation } from "../../context/translation"
-
+import usa from "../../imgs/usa.png"
+import leb from "../../imgs/leb.png"
 export default function Langauge() {
-    const { setLocale, RTL } = useTranslation();
+    const { setLocale } = useTranslation();
     return (
-        <select
-            
-            style={{ backgroundColor: "transparent", }}
-            className={`px-3 cursor-pointer text-white`}
-            onChange={(e) => setLocale(e.target.value)}
-            value={RTL ? "ar" : "en"}
-        >
-            <option  value="en" className={"text-white"}>
-                en
-            </option>
-            <option value="ar" className={"text-white"}>
-                ar
-            </option>
-        </select>
+        <div className="flex">
+            <img src={leb} className="sm:w-10 sm:h-10 w-6 h-6 mr-2 cursor-pointer" alt="lebanon" onClick={()=>setLocale("ar")}></img>
+            <img src={usa} className="sm:w-10 sm:h-10 w-6 h-6 cursor-pointer" alt="USA" onClick={()=>setLocale("en")}></img>
+        </div>
     )
 }

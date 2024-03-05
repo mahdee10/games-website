@@ -8,7 +8,7 @@
 }
 
 html {
-  background-color: #202036;
+  background-color: black;
 }
 
 
@@ -72,13 +72,31 @@ html {
   scroll-snap-type:y mandatory;
   height: 100vh;
 }
-select option {
-  /* background-color: red; */
-}
+
 
 option:hover{
   background-color: black;
 }
-select:focus option:checked {
-  /* background: red linear-gradient(0deg, red 0%, red 100%); */
+.games{
+  scroll-snap-align:center;
+  overflow: hidden;
+  scrollbar-width: none; 
+  -ms-overflow-style: none; 
+}
+
+.game img {
+  transition: filter 0.3s ease;
+}
+.game Link{
+  transition: background 0.3s ease;
+}
+.game:hover .game-img{
+
+    filter: brightness(0.2);
+  
+}
+
+.games-container{
+  display: grid;
+  grid-template-columns: repeat(3, minmax(120px, 1fr));
 }

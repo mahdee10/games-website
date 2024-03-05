@@ -2,5 +2,10 @@
     "navbar-home":"Home",
     "navbar-games":"Games",
     "welcome-sentence1":"Dive into a world of enjoyment",
-    "welcome-sentence2":"and challenge yourself with our selection of engaging games!"
+    "welcome-sentence2":"and challenge yourself with our selection of engaging games!",
+    "game-bara": "Who's outside the story",
+    "game-play":"Play Now",
+    "game-tic":"Tic Tac Toe",
+    "game-wordle":"Wordle",
+    "game-soon":"Coming Soon"
 }
