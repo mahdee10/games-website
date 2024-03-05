@@ -25,11 +25,12 @@ export default function GamePoster({ src, title, published }) {
     return (
         <div
             onMouseEnter={() => {
-                if (published && size<720) { setHidden(false) }
+                if (published && size>720) { setHidden(false) }
             }
             }
             onMouseLeave={() => {
-                if (published && size<720) { setHidden(true) }
+                
+                if (published && size>720) { setHidden(true) }
             }
             }
             className="mb-5 sm:mr-2 lg:w-[290px] lg:h-[200px] md:w-[250px] md:h-[200px] w-40 h-40 relative cursor-pointer game shrink-0">
