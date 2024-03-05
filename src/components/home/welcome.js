@@ -22,7 +22,7 @@ export default function Welcome({ScrollTo,intoRef}){
     return(
         <div 
         style={{
-            backgroundSize: size <= 768 ? '100% 100%' : 'cover',
+            backgroundSize: size <= 768 ? '100% 100vh' : 'cover',
             backgroundRepeat: 'no-repeat',
             backgroundImage:
                 size <= 768 ? `url(${mobile})`
