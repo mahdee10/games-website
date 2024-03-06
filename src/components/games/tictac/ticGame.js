@@ -81,6 +81,7 @@ export default function TicGame({ player1, player2 }) {
         ) {
             if (!turn) {
                 setWinner(1);
+                console.log(player1)
             } else {
                 setWinner(2);
             }
@@ -93,14 +94,14 @@ export default function TicGame({ player1, player2 }) {
     return (
         <div className="ad py-5 h-full">
             <div className="flex justify-between sm:px-24 px-5 sm:order-1 order-2">
-                <h3 className={` text-3xl font-black ${turn ? "text-[#b9004e]" : "text-white"}`}>{player1}</h3>
+                <h3 className={` text-3xl font-black ${turn  ? "text-[#b9004e]" : "text-white"}`}>{player1}</h3>
                 <h3 className={` text-3xl font-black ${!turn ? "text-[#b9004e]" : "text-white"}`}>{player2}</h3>
             </div>
             <div className="flex justify-center  items-center top-0 left-0 w-full  relative sm:order-2 order-1">
                 <div className="grid-container   sm:w-[350px] sm:h-[350px] w-[200px] h-[200px]">
                     {
                         boxes.map((box) => (
-                            <div onClick={() => { if(winner===0)handleBoxClick(box.id)}} className={`${winner===0 ? "cursor-pointer":""} border-2 border-white flex justify-center items-center`}>
+                            <div onClick={() => { if(winner===0 && !box.clicked)handleBoxClick(box.id)}} className={`${winner===0 ? "cursor-pointer":""} border-2 border-white flex justify-center items-center`}>
                                 {
                                     box.clicked && <div className="text-white text-4xl ">{box.value}</div>
 
@@ -110,7 +111,7 @@ export default function TicGame({ player1, player2 }) {
                     }
                 </div>
                 <TicCountDown></TicCountDown>
-                {winner!==0&&<WinnerTic winner={winner===0? player1:player2}></WinnerTic>}
+                {winner!==0&&<WinnerTic winner={winner===1? player1:player2}></WinnerTic>}
             </div>
         </div>
     )
