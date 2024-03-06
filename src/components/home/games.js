@@ -8,7 +8,8 @@ export default function Games() {
         {
             title: "game-tic",
             src: tic,
-            published:false
+            published:true,
+            path:"tictac"
         },
         {
             title: "game-bara",
@@ -32,7 +33,7 @@ export default function Games() {
             <div className="sm:h-1/2 h-[50%] w-full flex  flex-wrap  justify-between items-center sm:py-0 py-20">
                 {
                     games.map((game) => (
-                        <GamePoster published={game.published} showTitle={game.showTitle} title={game.title} key={game.title} src={game.src}></GamePoster>
+                        <GamePoster path={game.path} published={game.published} showTitle={game.showTitle} title={game.title} key={game.title} src={game.src}></GamePoster>
 
                     ))
                 }

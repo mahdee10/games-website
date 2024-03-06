@@ -34,7 +34,6 @@ html {
 
 
 .welcome{
-  /* background-image: url('./imgs/welcome3.jpg');  */
   background-repeat: no-repeat;
   background-size:cover;
   scroll-snap-align:center;
@@ -60,11 +59,7 @@ html {
   }
 }
 
-@media screen and (max-width: 600px) {
-  .welcome {
-    background-size: 100% 100%;
-  }
-}
+
 
 .home{
   overflow-y: auto; 
@@ -96,7 +91,22 @@ option:hover{
   
 }
 
-.games-container{
+/* .games-container{
   display: grid;
   grid-template-columns: repeat(3, minmax(120px, 1fr));
+} */
+
+.game-container{
+  height: 87vh;
+}
+
+.count-overlay {
+  background: rgba(0, 0, 0, 0.3);
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(3, 33.33%); /* Each column takes up 1/3 of the container */
+  grid-template-rows: repeat(3, 33.33%); /* Each row takes up 1/3 of the container */
+  
 }

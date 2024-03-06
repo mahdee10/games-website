@@ -13,7 +13,7 @@ export default function Navbar() {
 
     return (
         <>
-            <nav className={` w-full sm:top-0 sm:left-0  navbar md:pb-5 z-10 fixed sm:px-5 px-3`}>
+            <nav className={`order-1 w-full top-0 left-0  navbar pb-5 z-10 fixed sm:px-5 px-3`}>
                 <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@700&family=Jomhuria&family=Open+Sans:wght@300&display=swap" rel="stylesheet"></link>
                 <div className={`max-w-screen-xl flex flex-wrap justify-between  items-center  mx-auto ${RTL ? "flex-row-reverse" : ""}`}>
                     <Link to="/" className={`block text-center logo  no-underline text-white sm:py-1 h-full leading-8  py-3.5 italic font-extrabold ${pathname === '/' ? '' : ''}`}><span className="text-white text-3xl">L3eeb</span></Link>
