@@ -14,7 +14,7 @@ export default function Games() {
         {
             title: "game-bara",
             src: bara,
-            published:true
+            published:false
 
         },
         {
