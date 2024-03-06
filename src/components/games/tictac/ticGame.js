@@ -81,7 +81,6 @@ export default function TicGame({ player1, player2 }) {
         ) {
             if (!turn) {
                 setWinner(1);
-                console.log(player1)
             } else {
                 setWinner(2);
             }
