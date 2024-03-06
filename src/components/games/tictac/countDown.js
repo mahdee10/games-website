@@ -19,7 +19,7 @@ export default function TicCountDown() {
     return (
         <>
             {showCount && (
-                <div className={`text-white count-overlay flex justify-center items-center top-0 left-0 w-full h-full`}>
+                <div className={`text-5xl absolute text-white count-overlay flex justify-center items-center top-0 left-0 w-full h-full`}>
                     {count}
                 </div>
             )}

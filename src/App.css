@@ -101,7 +101,8 @@ option:hover{
 }
 
 .count-overlay {
-  background: rgba(0, 0, 0, 0.3);
+  background: rgba(0, 0, 0, 0.9);
+  /* background-color: rebeccapurple; */
 }
 
 .grid-container {
@@ -109,4 +110,15 @@ option:hover{
   grid-template-columns: repeat(3, 33.33%); /* Each column takes up 1/3 of the container */
   grid-template-rows: repeat(3, 33.33%); /* Each row takes up 1/3 of the container */
   
+}
+
+.ad{
+  display: grid;
+  grid-template-rows: auto 1fr;
+}
+
+@media (max-width: 768px) {
+  .ad {
+    grid-template-rows: 1fr auto ;
+  }
 }
