@@ -85,6 +85,9 @@ export default function TicGame({ player1, player2 }) {
                 setWinner(2);
             }
         }
+        else if(boxes.every(box => box.clicked)){
+            setWinner(3)
+        }
     }, [boxes, turn]);
 
     useEffect(() => {
@@ -110,7 +113,7 @@ export default function TicGame({ player1, player2 }) {
                     }
                 </div>
                 <TicCountDown></TicCountDown>
-                {winner!==0&&<WinnerTic winner={winner===1? player1:player2}></WinnerTic>}
+                {winner!==0&&<WinnerTic winner={winner===1? player1:winner===2?player2:"Draw"}></WinnerTic>}
             </div>
         </div>
     )

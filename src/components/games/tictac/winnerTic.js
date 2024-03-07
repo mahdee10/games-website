@@ -20,7 +20,7 @@ export default function WinnerTic({winner}){
         <>
             {showResult && (
                 <div className={`text-5xl absolute text-white count-overlay flex justify-center items-center top-0 left-0 w-full h-full`}>
-                    {winner} wins
+                    {winner} {winner==="Draw"?"":"wins"}
                 </div>
             )}
         </>
