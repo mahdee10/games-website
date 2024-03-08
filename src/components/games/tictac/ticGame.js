@@ -6,54 +6,18 @@ import WinnerTic from "./winnerTic"
 export default function TicGame({ player1, player2 }) {
     const [turn, setTurn] = useState(false)
     const [winner, setWinner] = useState(0)
-    const [boxes, setBoxes] = useState([
-        {
-            id: 1,
-            clicked: false,
-            value: ""
-        },
-        {
-            id: 2,
-            clicked: false,
-            value: ""
-        },
-        {
-            id: 3,
-            clicked: false,
-            value: ""
-        },
-        {
-            id: 4,
-            clicked: false,
-            value: ""
-        },
-
-        {
-            id: 5,
-            clicked: false,
-            value: ""
-        }, {
-            id: 6,
-            clicked: false,
-            value: ""
-        },
-        {
-            id: 7,
-            clicked: false,
-            value: ""
-        },
-        {
-            id: 8,
-            clicked: false,
-            value: ""
-        },
-        {
-            id: 9,
-            clicked: false,
-            value: ""
-        },
-
-    ])
+    const initialBoxesState = [
+        { id: 1, clicked: false, value: "" },
+        { id: 2, clicked: false, value: "" },
+        { id: 3, clicked: false, value: "" },
+        { id: 4, clicked: false, value: "" },
+        { id: 5, clicked: false, value: "" },
+        { id: 6, clicked: false, value: "" },
+        { id: 7, clicked: false, value: "" },
+        { id: 8, clicked: false, value: "" },
+        { id: 9, clicked: false, value: "" },
+    ];
+    const [boxes, setBoxes] = useState(initialBoxesState);
     const handleBoxClick = (id) => {
 
         const updatedBoxes = boxes.map(box => {
@@ -68,6 +32,12 @@ export default function TicGame({ player1, player2 }) {
         checkResult()
     };
 
+    function playagain(){
+        setBoxes(initialBoxesState);
+        setTurn(false);
+        setWinner(0);
+    }
+
     const checkResult = useCallback(() => {
         if (
             (boxes[0].value === boxes[1].value && boxes[1].value === boxes[2].value && boxes[0].value !== "") ||
@@ -81,6 +51,7 @@ export default function TicGame({ player1, player2 }) {
         ) {
             if (!turn) {
                 setWinner(1);
+                console.log("jh")
             } else {
                 setWinner(2);
             }
@@ -113,7 +84,7 @@ export default function TicGame({ player1, player2 }) {
                     }
                 </div>
                 <TicCountDown></TicCountDown>
-                {winner!==0&&<WinnerTic winner={winner===1? player1:winner===2?player2:"Draw"}></WinnerTic>}
+                {winner!==0&&<WinnerTic playagain={playagain} winner={winner===1? player1:winner===2?player2:"Draw"}></WinnerTic>}
             </div>
         </div>
     )
