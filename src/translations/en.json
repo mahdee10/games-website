@@ -7,5 +7,14 @@
     "game-play":"Play Now",
     "game-tic":"Tic Tac Toe",
     "game-wordle":"Wordle",
-    "game-soon":"Coming Soon"
+    "game-soon":"Coming Soon",
+    "tic-form-title":"Enter Players Names",
+    "tic-form-p1":"Player 1",
+    "tic-form-p2":"Player 2",
+    "tic-form-play":"Play",
+    "tic-wins":"Wins",
+    "tic-draw":"Draw",
+    "tic-again":"Play Again",
+    "tic-turn":"Turn"
+    
 }

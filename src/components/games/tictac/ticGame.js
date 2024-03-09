@@ -1,10 +1,12 @@
 import { useCallback, useEffect, useState } from "react"
 import TicCountDown from "./countDown"
 import WinnerTic from "./winnerTic"
+import { useTranslation } from "../../../context/translation"
 
 
 export default function TicGame({ player1, player2 }) {
     const [turn, setTurn] = useState(false)
+    const [gameEnds, setGameEnds] = useState(false)
     const [winner, setWinner] = useState(0)
     const initialBoxesState = [
         { id: 1, clicked: false, value: "" },
@@ -18,6 +20,7 @@ export default function TicGame({ player1, player2 }) {
         { id: 9, clicked: false, value: "" },
     ];
     const [boxes, setBoxes] = useState(initialBoxesState);
+    const {t,RTL}=useTranslation()
     const handleBoxClick = (id) => {
 
         const updatedBoxes = boxes.map(box => {
@@ -36,6 +39,7 @@ export default function TicGame({ player1, player2 }) {
         setBoxes(initialBoxesState);
         setTurn(false);
         setWinner(0);
+        setGameEnds(false)
     }
 
     const checkResult = useCallback(() => {
@@ -50,25 +54,33 @@ export default function TicGame({ player1, player2 }) {
             (boxes[2].value === boxes[4].value && boxes[4].value === boxes[6].value && boxes[2].value !== "")
         ) {
             if (!turn) {
+                setGameEnds(true)
                 setWinner(1);
                 console.log("jh")
             } else {
+                setGameEnds(true)
                 setWinner(2);
             }
         }
         else if(boxes.every(box => box.clicked)){
+            setGameEnds(true)
             setWinner(3)
         }
+        
     }, [boxes, turn]);
 
+    useEffect(()=>{
+        console.log(gameEnds)
+    },[gameEnds])
     useEffect(() => {
         checkResult();
     }, [boxes, checkResult]);
     return (
         <div className="ad py-5 h-full">
-            <div className="flex justify-between sm:px-24 px-5 sm:order-1 order-2">
-                <h3 className={` text-3xl font-black ${turn  ? "text-[#b9004e]" : "text-white"}`}>{player1}</h3>
-                <h3 className={` text-3xl font-black ${!turn ? "text-[#b9004e]" : "text-white"}`}>{player2}</h3>
+            <div className="flex justify-center sm:px-24 px-5 sm:order-1 order-2 ">
+                {/* <h3  className={` text-3xl font-black ${!gameEnds? (turn  ? "text-[#b9004e]" : "text-white"):"text-white"} `}>{player1}</h3>
+                <h3  className={` text-3xl font-black ${!gameEnds? (!turn  ? "text-[#b9004e]" : "text-white"):"text-white"} `}>{player2}</h3> */}
+                {!gameEnds&&<h3  className={` text-3xl font-black text-[#b9004e]`}>{ turn  ? player1  : player2} {!RTL ? "'s" : ""} { t("tic-turn") }</h3>}
             </div>
             <div className="flex justify-center  items-center top-0 left-0 w-full  relative sm:order-2 order-1">
                 <div className="grid-container   sm:w-[350px] sm:h-[350px] w-[200px] h-[200px]">

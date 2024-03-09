@@ -8,7 +8,15 @@
     "game-play": "العب الآن",
     "game-tic": "لعبة أكس أو",
     "game-wordle": "ووردل",
-    "game-soon": "قريباً"
+    "game-soon": "قريباً",
+    "tic-form-title": "أدخل أسماء اللاعبين",
+    "tic-form-p1": "لاعب 1",
+    "tic-form-p2": "لاعب 2",
+    "tic-form-play": "العب",
+    "tic-wins": "فاز",
+    "tic-draw": "تعادل",
+    "tic-again": "العب مرة أخرى",
+    "tic-turn": "دور"
 
 
 
