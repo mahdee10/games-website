@@ -14,8 +14,8 @@ export default function Games() {
         {
             title: "game-bara",
             src: bara,
-            published:false
-
+            published:true,
+            path:"minbara"
         },
         {
             title: "game-wordle",

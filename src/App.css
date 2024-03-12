@@ -124,3 +124,8 @@ option:hover{
     grid-template-rows: 1fr auto 1fr;
   }
 } */
+
+.min-category{
+  display: grid;
+  grid-template-rows:auto 1fr;
+}
