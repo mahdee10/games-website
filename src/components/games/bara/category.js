@@ -10,9 +10,9 @@ export default function MinCategory({ handleSubmit }) {
         "clothes",
     ])
     return (
-        <div className="w-full h-full flex justify-center items-center">
-            <div className="flex justify-between sm:w-1/2 sm:h-1/2 flex-wrap">
-                <h3 className="text-4xl font-black text-white text-center w-full py-5 mb-5">Choose a Category</h3>
+        <div className="w-full h-full flex justify-center sm:items-center">
+            <div className="flex justify-between sm:w-1/2 h-1/2  flex-wrap sm:mt-0 mt-10">
+                <h3 className="sm:text-4xl text-2xl font-black text-white text-center w-full py-5 mb-5">Choose a Category</h3>
 
                 {
                     categories.map((category) => (
