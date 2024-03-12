@@ -18,7 +18,7 @@ export default function WinnerTic({ winner, playagain }) {
             {showVideo && (
                 <div dir={RTL ? "rtl" : "ltr"} className={`text-5xl absolute text-white count-overlay flex flex-col justify-center items-center top-0 left-0 w-full h-full`}>
 
-                    <video width={100} height={100} autoPlay>
+                    <video playsInline width={100} height={100} autoPlay>
                         <source src={abo} type="video/mp4" />
                     </video>
                 </div>
