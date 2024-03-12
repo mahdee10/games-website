@@ -8,7 +8,7 @@ export default function WinnerTic({ winner, playagain }) {
     useEffect(() => {
         const timer = setTimeout(() => {
             setShowVideo(false);
-        }, 3000);
+        }, 4000);
 
         return () => clearTimeout(timer);
     }, []);
