@@ -4,13 +4,7 @@ import MinForm from "../../components/games/bara/minForm";
 import MinCategory from "../../components/games/bara/category";
 
 export default function MinBara() {
-    // const [players, setPlayers] = useState([
-    //     {
-    //         name: "",
-    //         score: 0,
-    //         online: false
-    //     }
-    // ]);
+    const [players, setPlayers] = useState([]);
     const [step, setStep] = useState(0);
     const [category, setCategory] = useState("");
     const handleSubmit = (place,cat) => {
@@ -25,7 +19,7 @@ export default function MinBara() {
                         <MinCategory handleSubmit={handleSubmit}></MinCategory>
                         :
                         step === 1 ?
-                            <MinForm category={category}></MinForm>
+                            <MinForm players={players} setPlayers={setPlayers} category={category}></MinForm>
                             :
                             null
                 }
