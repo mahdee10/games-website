@@ -10,7 +10,7 @@
 }
 
 html {
-  background-color: black;
+  background-color: #0a1a2a;
 }
 
 
@@ -30,9 +30,9 @@ html {
 
 
 
-.title{
+/* .title{
     text-shadow: -1px 0 red, 0 1px red, 1px 0 red, 0 -1px red
-}
+} */
 
 
 .welcome{
@@ -41,7 +41,10 @@ html {
   scroll-snap-align:center;
   overflow: hidden;
   scrollbar-width: none; 
-  -ms-overflow-style: none; 
+  -ms-overflow-style: none;
+  background-image: linear-gradient(to right, #0a1a2a, #2a0a20, #303485);
+  background-size: 400% 400%;
+	animation: gradient 10s ease infinite;
 }
 .home::-webkit-scrollbar {
   display: none; 
@@ -151,4 +154,34 @@ option:hover{
 
 .scrollbar-hidden::-webkit-scrollbar-thumb:hover {
   background:white;
+}
+
+
+.welcome-btn {
+  transition: border-color 0.7s ease, color 0.7s ease, border-radius 0.7s ease;
+}
+
+.welcome-btn:hover {
+  border-color: #27f5d1;
+  border-bottom-right-radius: 0;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0.75rem;
+  border-top-right-radius: 0.75rem;
+}
+.welcome-btn button{
+  transition: border-color 0.7s ease, color 0.7s ease, border-radius 0.7s ease;
+
+}
+.welcome-btn:hover button{
+  border-color: #27f5d1;
+  background-color: #27f5d1;
+  color: black;
+  border-bottom-right-radius: 0;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0.75rem;
+  border-top-right-radius: 0.75rem;
+}
+.welcome p,
+nav{
+  font-family: "Madimi One", sans-serif;
 }

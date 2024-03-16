@@ -1,6 +1,7 @@
 import { useRef } from "react";
-import Welcome from "../components/home/welcome";
+// import Welcome from "../components/home/welcome";
 import Games from "../components/home/games";
+import Welcome2 from "../components/home/welcome2";
 
 
 export default function Home() {
@@ -10,9 +11,10 @@ export default function Home() {
         section.current.scrollIntoView({ behavior: "smooth" });
     }
     return (
-        <div className="home ">
+        <div className="home">
             <div ref={welcome}>
-                <Welcome intoRef={games} ScrollTo={ScrollTo}></Welcome>
+                {/* <Welcome intoRef={games} ScrollTo={ScrollTo}></Welcome> */}
+                <Welcome2 intoRef={games} ScrollTo={ScrollTo}></Welcome2>
             </div>
             <div ref={games}>
                 <Games></Games>
