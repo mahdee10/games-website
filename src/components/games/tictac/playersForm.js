@@ -26,7 +26,7 @@ export default function PlayersForm({ player1, setPlayer1, setPlayer2, player2, 
                     disabled={!player1 || !player2}
                     style={{ cursor: (!player1 || !player2) ? "not-allowed" : "pointer" }}
                     onClick={() => handleSubmit(1)}
-                    className={`rounded-xl p-2 w-24 font-bold text-white border-2 cursor-cursor-not-allowed border-[#b9004e] ${!player1 || !player2 ? "cursor-cursor-not-allowed" : ""}`}>
+                    className={`rounded-xl p-2 w-24 font-bold text-white border-2 cursor-cursor-not-allowed border-[#fb3690] ${!player1 || !player2 ? "cursor-cursor-not-allowed" : ""}`}>
                     {t("tic-form-play")}
                 </button>
             </div>

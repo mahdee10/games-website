@@ -1,28 +1,28 @@
-import React, { useState, useEffect } from 'react';
+// import React, { useState, useEffect } from 'react';
 import { useTranslation } from "../../../context/translation";
-import abo from "../../../imgs/abo.mp4"
+// import abo from "../../../imgs/abo.mp4"
 export default function WinnerTic({ winner, playagain }) {
     const { t, RTL } = useTranslation();
-    const [showVideo, setShowVideo] = useState(true);
+    // const [showVideo, setShowVideo] = useState(true);
 
-    useEffect(() => {
-        const timer = setTimeout(() => {
-            setShowVideo(false);
-        }, 4000);
+    // useEffect(() => {
+    //     const timer = setTimeout(() => {
+    //         setShowVideo(false);
+    //     }, 4000);
 
-        return () => clearTimeout(timer);
-    }, []);
+    //     return () => clearTimeout(timer);
+    // }, []);
 
     return (
         <>
-            {showVideo && (
+            {/* {showVideo && (
                 <div  className={`text-5xl absolute text-white count-overlay flex flex-col justify-center items-center top-0 left-0 w-full h-full`}>
                     <video playsInline  className='w-full h-full' autoPlay>
                         <source src={abo} type="video/mp4" />
                     </video>
                 </div>
-            )}
-            {!showVideo && (
+            )} */}
+            {/* {!showVideo && ( */}
                 <div dir={RTL ? "rtl" : "ltr"} className={`text-5xl absolute text-white count-overlay flex flex-col justify-center items-center top-0 left-0 w-full h-full`}>
                     {winner} {winner === t("tic-draw") ? "" : t("tic-wins")}
 
@@ -33,7 +33,7 @@ export default function WinnerTic({ winner, playagain }) {
                         {t("tic-again")}
                     </button>
                 </div>
-            )}
+            {/* )} */}
         </>
     );
 }
