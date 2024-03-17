@@ -1,6 +1,8 @@
 
 import { useTranslation } from "../../context/translation";
 import { Helmet } from "react-helmet";
+import triangle from "../../imgs/triangle.png"
+import controller from "../../imgs/controller.png"
 export default function Welcome2({ ScrollTo, intoRef }) {
     const { t } = useTranslation();
 
@@ -19,6 +21,10 @@ export default function Welcome2({ ScrollTo, intoRef }) {
                         <button className="sm:w-44 w-32 text-white border-2 font-bold border-white p-2 rounded-tl-xl rounded-br-xl" onClick={() => ScrollTo(intoRef)}>Play Now</button>
                     </div>
                 </div>
+                <p className="absolute text-4xl top-[15%] left-[20%] -rotate-6 w-fit text-white">X</p>
+                <p className="absolute text-4xl top-[20%] right-[10%] rotate-12  w-fit text-white">O</p>
+                <img src={triangle} className="absolute  bottom-[10%] right-[10%] -rotate-12  w-7 h-7 text-white" alt="triangle"></img>
+                <img src={controller} className="absolute  bottom-[15%] left-[14%] rotate-12  w-7 h-7 text-white" alt="controller"></img>
             </div>
         </>
     )
