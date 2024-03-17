@@ -42,12 +42,18 @@ html {
   overflow: hidden;
   scrollbar-width: none; 
   -ms-overflow-style: none;
-  background-image: linear-gradient(to right, #0a1a2a, #2a0a20, #303485);
+  /* background-image: linear-gradient(to right, #0a1a2a, #2a0a20, #303485);
   background-size: 400% 400%;
-	animation: gradient 10s ease infinite;
+	animation: gradient 10s ease infinite; */
 }
 .home::-webkit-scrollbar {
   display: none; 
+}
+.home{
+  background-image: linear-gradient(to right, #0a1a2a, #2a0a20, #303485);
+  background-size: 400% 400%;
+	animation: gradient 10s ease infinite;
+  background-attachment: fixed;
 }
 
 @keyframes gradient {
@@ -78,6 +84,7 @@ option:hover{
   background-color: black;
 }
 .games{
+  background-color: #0a1a2a;
   scroll-snap-align:center;
   overflow: hidden;
   scrollbar-width: none; 

@@ -1,7 +1,6 @@
 import { useRef } from "react";
-// import Welcome from "../components/home/welcome";
 import Games from "../components/home/games";
-import Welcome2 from "../components/home/welcome2";
+import Welcome from "../components/home/welcome";
 
 
 export default function Home() {
@@ -14,7 +13,7 @@ export default function Home() {
         <div className="home">
             <div ref={welcome}>
                 {/* <Welcome intoRef={games} ScrollTo={ScrollTo}></Welcome> */}
-                <Welcome2 intoRef={games} ScrollTo={ScrollTo}></Welcome2>
+                <Welcome intoRef={games} ScrollTo={ScrollTo}></Welcome>
             </div>
             <div ref={games}>
                 <Games></Games>
