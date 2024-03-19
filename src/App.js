@@ -5,9 +5,11 @@ import { TranslationProvider } from './context/translation';
 import Navbar from './components/header/navbar';
 import TicTac from './pages/games/TicTac';
 import MinBara from './pages/games/MinBara';
+import { MinCategoryProvider } from './context/minCategoryContext';
 function App() {
   return (
     <TranslationProvider>
+      <MinCategoryProvider>
       <BrowserRouter>
         <Navbar />
         <Routes>
@@ -18,6 +20,7 @@ function App() {
           {/* </Route> */}
         </Routes>
       </BrowserRouter>
+      </MinCategoryProvider>
     </TranslationProvider>
   );
 }

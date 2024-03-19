@@ -1,22 +1,78 @@
-import { createContext, useState, useContext, useEffect } from "react";
+import { createContext, useState, useContext } from "react";
 
 const MinCategoryContext = createContext(null);
 
 const MinCategoryProvider = ({ children }) => {
+  const [chosenWord, setChosenWord] = useState("")
+  const categoriesContent = [
+    {
+      id: 0,
+      values: [
+        "babHara",
+        "day3a",
+        "5rbi"
+      ]
+    },
+    {
+      id: 1,
+      values: [
+        "messi",
+        "neymar",
+        "suarez"
+      ]
+    },
+    {
+      id: 2,
+      values: [
+        "scream",
+        "fast and furious",
+        "harry potter"
+      ]
+    },
+    {
+      id: 3,
+      values: [
+        "pepsi",
+        "cola",
+        "rc"
+      ]
+    },
+    {
+      id: 4,
+      values: [
+        "mlfof",
+        "mjdara",
+        "kbsi"
+      ]
+    },
+    {
+      id: 5,
+      values: [
+        "3on",
+        "baseel",
+        "hariri"
+      ]
+    },
+  ]
 
-  useEffect(() => {
-    
-  }, []);
+  function handleChooseWord(id) {
 
+    const findCategory = categoriesContent.find((item) => item.id === id)
+    if (findCategory) {
+      const randomNumber = Math.floor(Math.random() * findCategory.values.length);;
+      setChosenWord(findCategory.values[randomNumber])
+      console.log(findCategory.values[randomNumber])
+    }
 
+  }
 
   return (
-    <MinCategoryContext.Provider value={{  }}>
+    <MinCategoryContext.Provider value={{ handleChooseWord,chosenWord }}>
       {children}
     </MinCategoryContext.Provider>
   );
 };
 
-const useTranslation = () => useContext(TranslationContext);
+const useMinCategory = () => useContext(MinCategoryContext);
 
-export { TranslationProvider, useTranslation };
+export { MinCategoryProvider, useMinCategory };

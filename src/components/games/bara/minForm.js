@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { useTranslation } from "../../../context/translation";
 import trash from "../../../imgs/trash.png"
-export default function MinForm({ players, setPlayers }) {
+export default function MinForm({ players, setPlayers,handleSubmitForm }) {
     const { t, RTL } = useTranslation();
     const [input, setInput] = useState("")
 
@@ -57,7 +57,7 @@ export default function MinForm({ players, setPlayers }) {
                 </div>
                 <div className="text-white text-2xl pt-10 text-center">
                     <button
-                        onClick={() => handleSubmit()}
+                        onClick={() => handleSubmitForm(1)}
                         className={`rounded-xl p-2 w-fit  text-white border-2  border-[#b9004e] `}>
                         Start Game
                     </button>
