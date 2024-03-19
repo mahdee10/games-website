@@ -15,7 +15,7 @@ export default function TicGame({ player1, player2 }) {
     const initialBoxesState = [
         { id: 1, clicked: false, value: "", design:"border-l-0 border-t-0 "},
         { id: 2, clicked: false, value: "", design:"border-t-0"},
-        { id: 3, clicked: false, value: "", design:"border-l-0 border-t-0"},
+        { id: 3, clicked: false, value: "", design:"border-r-0 border-t-0"},
         { id: 4, clicked: false, value: "", design:"border-l-0"},
         { id: 5, clicked: false, value: "", design:""},
         { id: 6, clicked: false, value: "", design:"border-r-0"},
