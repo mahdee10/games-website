@@ -39,7 +39,6 @@ export default function MinVote({ updateScores, players, handleStep, imposter })
             </div>
             <div className="flex flex-col justify-center items-center ">
                 {players.map((player, index) => (
-                    // Render the player's name as an option only if it's not the current player
                     (index !== currentIndex) && (
                         <div
                             key={index}
