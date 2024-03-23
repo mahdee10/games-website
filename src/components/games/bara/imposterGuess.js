@@ -38,10 +38,10 @@ export default function ImposterGuess({ imposter, players, handleStep,updateScor
                         categories.map((category, index) => (
                             <div
                                 onClick={() => { if (!chosen) selectWord(category) }}
-                                className={`mt-5 text-white p-3 border-2 w-full border-white rounded-xl flex justify-between items-center 
-                        ${chosen && category === chosenWord ? "border-green-500" : ""}
-                        ${chosen && selected === category && category === chosenWord ? "border-green-500" : ""}
-                        ${chosen && selected === category && category !== chosenWord ? "border-red-500" : ""}
+                                className={`mt-5 text-white p-3 border-2 w-full rounded-xl flex justify-between items-center 
+                        ${chosen && category === chosenWord ? "border-[#27f5d1]" : ""}
+                        ${chosen && selected === category && category === chosenWord ? "border-[#27f5d1]" : ""}
+                        ${chosen && selected === category && category !== chosenWord ? "border-[#fb3690]" : ""}
                         ${RTL ? "flex-row-reverse" : ""}`}>
                                 {category}
                             </div>
