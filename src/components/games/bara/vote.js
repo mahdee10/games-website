@@ -10,7 +10,6 @@ export default function MinVote({ updateScores, players, handleStep, imposter })
         const votedPlayer = players[playerIndex];
 
         if (currentPlayer.name === imposter.name) {
-            // Do something if the current player is the imposter
         } else {
             if (votedPlayer.name === imposter.name) {
                 const updatedPlayers = [...players];

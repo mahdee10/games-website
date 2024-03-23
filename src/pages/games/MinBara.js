@@ -64,7 +64,7 @@ export default function MinBara() {
                                                 <ShowImposter imposter={imposter} handleStep={handleStep} players={players}></ShowImposter>
                                                 :
                                                 step === 7 ?
-                                                    <ImposterGuess imposter={imposter} handleStep={handleStep} players={players}></ImposterGuess>
+                                                    <ImposterGuess updateScores={updateScores} imposter={imposter} handleStep={handleStep} players={players}></ImposterGuess>
                                                     :
                                                     step === 8 ?
                                                         <ShowResults handleStep={handleStep} players={players}></ShowResults>
