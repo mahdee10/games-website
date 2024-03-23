@@ -10,7 +10,7 @@ export default function ImposterGuess({ imposter,players, handleStep }) {
         handleStep(8)
     }
     return (
-        <div className="h-full flex flex-col justify-center ">
+        <div className="h-full flex flex-col items-center ">
             <div className="text-white text-center text-3xl">
             {imposter.name}  What is the word
             </div>
