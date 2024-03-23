@@ -10,18 +10,16 @@ export default function ImposterGuess({ imposter,players, handleStep }) {
         handleStep(8)
     }
     return (
-        <div className="h-full flex flex-col items-center ">
-            <div className="text-white text-center text-3xl">
-            {imposter.name}  What is the word
-            </div>
-
-            <div className="h-full flex flex-col  items-center ">
+        <div className="h-full flex flex-col pt-10">
+        <div className="text-white text-2xl pb-10 text-center">
+            {imposter.name} what is the word
+        </div>
+        <div className="h-full flex flex-col  items-center ">
             <div className="sm:w-1/4 w-full h-60 overflow-y-auto scrollbar-hidden px-5 ">
                 {
                     categories.map((category) => (
                         <div className={`mt-5 text-white p-3 border-2 w-full border-white rounded-xl flex justify-between items-center ${RTL ? "flex-row-reverse" : ""}`}>
-                           {category}
-                        
+                            {category}
                         </div>
                     ))
                 }
@@ -35,6 +33,6 @@ export default function ImposterGuess({ imposter,players, handleStep }) {
             </div>
         </div>
 
-        </div>
+    </div>
     )
 }
