@@ -43,6 +43,7 @@ export default function ImposterGuess({ imposter, players, handleStep, updateSco
 
 
             <div className="h-full flex flex-col pt-10 relative">
+                
                 {showVideo && (
                     <div className={`text-5xl absolute text-white count-overlay flex flex-col justify-center items-center top-0 left-0 w-full h-full`}>
                         <video playsInline className='w-full h-full' autoPlay>
