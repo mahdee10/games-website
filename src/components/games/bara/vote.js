@@ -3,7 +3,7 @@ import { useTranslation } from "../../../context/translation";
 
 export default function MinVote({ updateScores, players, handleStep, imposter }) {
     const [currentIndex, setCurrentIndex] = useState(0);
-    const { t } = useTranslation();
+    // const { t } = useTranslation();
 
     function handleVote(playerIndex) {
         const currentPlayer = players[currentIndex];
