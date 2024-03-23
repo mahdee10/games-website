@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { useTranslation } from "../../../context/translation";
+// import { useTranslation } from "../../../context/translation";
 
 export default function MinVote({ updateScores, players, handleStep, imposter }) {
     const [currentIndex, setCurrentIndex] = useState(0);
