@@ -15,6 +15,26 @@
     "tic-wins":"Wins",
     "tic-draw":"Draw",
     "tic-again":"Play Again",
-    "tic-turn":"Turn"
-    
+    "tic-turn":"Turn",
+    "min-ask":"ask",
+    "min-vote":"vote",
+    "min-next":"next",
+    "min-u":"You are",
+    "min-story":"the story",
+    "min-out":"out",
+    "min-in":"in",
+    "min-word":"and the word is",
+    "min-except":"ask any except for",
+    "min-start":"Start Game",
+    "min-give":"Give the phone to",
+    "min-add":"ADD",
+    "min-player":"player",
+    "min-category":"Choose a Category",
+    "min-category-series":"Series",
+    "min-category-football":"Football",
+    "min-category-movies":"Movies",
+    "min-category-drinks":"Drinks",
+    "min-category-food":"Food",
+    "min-category-politics":"Politics"
+
 }

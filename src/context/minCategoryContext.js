@@ -4,6 +4,7 @@ const MinCategoryContext = createContext(null);
 
 const MinCategoryProvider = ({ children }) => {
   const [chosenWord, setChosenWord] = useState("")
+  const [categories, setCategories] = useState("")
   const categoriesContent = [
     {
       id: 0,
@@ -56,7 +57,7 @@ const MinCategoryProvider = ({ children }) => {
   ]
 
   function handleChooseWord(id) {
-
+    setCategories(categoriesContent[id].values)
     const findCategory = categoriesContent.find((item) => item.id === id)
     if (findCategory) {
       const randomNumber = Math.floor(Math.random() * findCategory.values.length);;
@@ -67,7 +68,7 @@ const MinCategoryProvider = ({ children }) => {
   }
 
   return (
-    <MinCategoryContext.Provider value={{ handleChooseWord,chosenWord }}>
+    <MinCategoryContext.Provider value={{ handleChooseWord,chosenWord,categories }}>
       {children}
     </MinCategoryContext.Provider>
   );
