@@ -1,11 +1,12 @@
 // import { useState } from "react"
 import { useTranslation } from "../../../context/translation"
 
-export default function ShowResults({ players, handleStep }) {
+export default function ShowResults({ players, handleStep,changeImposter }) {
 
     const { t, RTL } = useTranslation()
     function handleMove() {
         handleStep(1)
+        
     }
     const sortedPlayers = [...players].sort((a, b) => b.score - a.score);
     return (

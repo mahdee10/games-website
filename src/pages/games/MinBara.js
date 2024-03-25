@@ -37,6 +37,10 @@ export default function MinBara() {
     function updateScores(newPlayers) {
         setPlayers(newPlayers)
     }
+    function changeImposter(){
+        const randomNumber = Math.floor(Math.random() * players.length);
+        setImposter(players[randomNumber])
+    }
     return (
         <GameContainer>
             
@@ -67,7 +71,7 @@ export default function MinBara() {
                                                     <ImposterGuess updateScores={updateScores} imposter={imposter} handleStep={handleStep} players={players}></ImposterGuess>
                                                     :
                                                     step === 8 ?
-                                                        <ShowResults handleStep={handleStep} players={players}></ShowResults>
+                                                        <ShowResults changeImposter={changeImposter} handleStep={handleStep} players={players}></ShowResults>
                                                         : null
                 }
             </div>
