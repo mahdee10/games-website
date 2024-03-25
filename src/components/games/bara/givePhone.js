@@ -7,10 +7,12 @@ export default function GivePhone({ handleNextStep, player }) {
             <div className="text-white text-center text-3xl">
                 {t("min-give")} {player.name}
             </div>
-            <div className="flex justify-center mt-3">
-                <div className="welcome-btn p-1  border-2 mt-5  border-[#fb3690] w-fit h-fit self-center rounded-tl-xl rounded-br-xl">
-                    <button className="sm:w-44 w-32 text-white border-2 font-bold border-[#fb3690] p-2 rounded-tl-xl rounded-br-xl" onClick={() => handleNextStep()}>{t("min-next")}</button>
-                </div>
+            <div className="flex justify-center mt-5">
+                <button
+                    onClick={() => handleNextStep()}
+                    className={`rounded-xl p-2 w-24 font-bold text-white border-2 cursor-cursor-not-allowed border-[#27f5d1] hover:border-[#fb3690] `}>
+                    {t("min-next")}
+                </button>
             </div>
 
         </div>

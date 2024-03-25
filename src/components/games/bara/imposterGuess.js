@@ -43,7 +43,7 @@ export default function ImposterGuess({ imposter, players, handleStep, updateSco
 
 
             <div className="h-full flex flex-col pt-10 relative">
-                
+
                 {showVideo && (
                     <div className={`text-5xl absolute text-white count-overlay flex flex-col justify-center items-center top-0 left-0 w-full h-full`}>
                         <video playsInline className='w-full h-full' autoPlay>
@@ -52,8 +52,8 @@ export default function ImposterGuess({ imposter, players, handleStep, updateSco
                     </div>
                 )}
 
-                <div className="text-white text-2xl pb-10 text-center">
-                    {imposter.name} what is the word
+                <div style={{ direction: RTL ? "rtl" : "ltr" }} className="text-white text-2xl pb-10 text-center">
+                    {imposter.name} {t("min-ask-imposter")}
                 </div>
                 <div className="h-full flex flex-col  items-center ">
                     <div className="sm:w-1/4 w-full h-60 overflow-y-auto scrollbar-hidden px-5 ">
@@ -66,7 +66,7 @@ export default function ImposterGuess({ imposter, players, handleStep, updateSco
                         ${chosen && selected === category && category === chosenWord ? "border-[#27f5d1]" : ""}
                         ${chosen && selected === category && category !== chosenWord ? "border-[#fb3690]" : ""}
                         ${RTL ? "flex-row-reverse" : ""}`}>
-                                    {category}
+                                    {t(category)}
                                 </div>
                             ))
                         }
@@ -74,7 +74,7 @@ export default function ImposterGuess({ imposter, players, handleStep, updateSco
                     <div className="text-white text-2xl pt-10 text-center">
                         <button
                             onClick={() => handleMove()}
-                            className={`rounded-xl p-2 w-fit  text-white border-2  border-[#b9004e] `}>
+                            className={`rounded-xl p-2 w-24 font-bold text-white border-2 cursor-cursor-not-allowed border-[#27f5d1] hover:border-[#fb3690] `}>
                             {t("min-next")}
                         </button>
                     </div>

@@ -3,23 +3,20 @@ import { useTranslation } from "../../../context/translation"
 
 export default function ShowImposter({ imposter,players, handleStep }) {
 
-    const { t } = useTranslation()
+    const { t,RTL } = useTranslation()
 
     function handleMove() {
         handleStep(7)
     }
     return (
         <div className="h-full flex flex-col justify-center ">
-            <div className="text-white text-center text-3xl">
-                The imposter is 
+            <div style={{direction:RTL?"rtl":"ltr"}} className="text-white text-center text-3xl">
+                 {imposter.name} {t("min-show-imposter")}
             </div>
-            <div className="text-white text-center text-3xl mt-3">
-                {imposter.name}
-            </div>
-            <div className="flex justify-center mt-3">
+            <div className="flex justify-center mt-5">
                 <button
                     onClick={() => handleMove()}
-                    className={`rounded-xl p-2 w-fit  text-white border-2  border-[#b9004e] `}>
+                    className={`rounded-xl p-2 w-24 font-bold text-white border-2 cursor-cursor-not-allowed border-[#27f5d1] hover:border-[#fb3690] `}>
                     {t("min-next")}
                 </button>
             </div>

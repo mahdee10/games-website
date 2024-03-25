@@ -9,49 +9,86 @@ const MinCategoryProvider = ({ children }) => {
     {
       id: 0,
       values: [
-        "babHara",
-        "day3a",
-        "5rbi"
+        "min-bablhara",
+        "min-zmnLbr8ot",
+        "min-tashmatash",
+        "min-day3aday3a",
+        "min-5rbi",
+        "min-haybi",
+        "min-ardtayiba",
+        "min-b23aldw2",
       ]
     },
     {
       id: 1,
       values: [
-        "messi",
-        "neymar",
-        "suarez"
+        "min-messi",
+        "min-neymar",
+        "min-suarez",
+        "min-mbape",
+        "min-dimaria",
+        "min-ozil",
+        "min-kaka",
+        "min-iniesta",
+        "min-xavi",
+        "min-cristiano",
+        "min-leva",
+        "min-muller",
       ]
     },
     {
       id: 2,
       values: [
-        "scream",
-        "fast and furious",
-        "harry potter"
+        "min-scream",
+        "min-fast",
+        "min-harrypoter",
+        "min-shrek",
       ]
     },
     {
       id: 3,
       values: [
-        "pepsi",
-        "cola",
-        "rc"
+        "min-pepsi",
+        "min-cola",
+        "min-rc",
+        "min-tea",
+        "min-zhourat",
+        "min-coffee",
+        "min-lemonade",
+        "min-avocado",
       ]
     },
     {
       id: 4,
       values: [
-        "mlfof",
-        "mjdara",
-        "kbsi"
+        "min-mlfof",
+        "min-kbsi",
+        "min-mnsf",
+        "min-mjdara",
+        "min-mshawi",
+        "min-mlo5iyi",
+        "min-m2lobk",
+        "min-fasolya",
+        "min-bemyi",
+        "min-bazela",
+        "min-wr23nb",
+        "min-lbnemo",
       ]
     },
     {
       id: 5,
       values: [
-        "3on",
-        "baseel",
-        "hariri"
+        "min-s3d",
+        "min-3on",
+        "min-baseel",
+        "min-sleiman",
+        "min-seidhassan",
+        "min-trump",
+        "min-makron",
+        "min-abo3byda",
+        "min-ordogan",
+        "min-wiam",
+        "min-jnblat"
       ]
     },
   ]
@@ -68,7 +105,7 @@ const MinCategoryProvider = ({ children }) => {
   }
 
   return (
-    <MinCategoryContext.Provider value={{ handleChooseWord,chosenWord,categories }}>
+    <MinCategoryContext.Provider value={{ handleChooseWord, chosenWord, categories }}>
       {children}
     </MinCategoryContext.Provider>
   );
