@@ -6,7 +6,7 @@ export default function ShowResults({ players, handleStep,changeImposter }) {
     const { t, RTL } = useTranslation()
     function handleMove() {
         handleStep(1)
-        
+        changeImposter()
     }
     const sortedPlayers = [...players].sort((a, b) => b.score - a.score);
     return (

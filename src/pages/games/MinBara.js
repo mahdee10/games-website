@@ -40,6 +40,7 @@ export default function MinBara() {
     function changeImposter(){
         const randomNumber = Math.floor(Math.random() * players.length);
         setImposter(players[randomNumber])
+        console.log(imposter.name)
     }
     return (
         <GameContainer>
